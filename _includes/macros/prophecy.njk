@@ -1,0 +1,16 @@
+{# {% set prophecySet = [{"host": "", "prediction": "", "veracity": true, "comments": ""}] %} #}
+{% for prophecy in prophecySet %}
+
+<div class="prophecy clearfix">
+    <header class="host {{prophecy.host | lower}}">
+        <div>{{prophecy.host}}</div>
+    </header>
+    <div class="prediction">
+        {{prophecy.prediction | safe}}
+    </div>
+    <div class="veracity {{prophecy.veracity}}" title="{{prophecy.veracity | string | title}}">
+        {{prophecy.comments | safe}}
+    </div>
+</div>
+
+{% endfor %}

@@ -1,0 +1,24 @@
+---
+layout: baseNavBar
+pageTitle: Episodes
+---
+<h1 class="is-size-2">Episodes</h1>
+
+<div class="episode-list">
+    <div class="columns">
+        <div class="column is-half">
+            {% include "components/episodeFilter.njk" %}
+
+        </div>
+        <div class="column is-half">
+            {% include "components/search.njk" %}
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-half">
+            {% set episodelist = collections.episodes | reverse %}
+            {% include "components/episodeList.njk" %}
+        </div>
+    </div>
+</div>

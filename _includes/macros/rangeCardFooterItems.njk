@@ -1,0 +1,31 @@
+{# 
+{% set first = {"url": "", "number": 0, "title": ""} %}
+{% set last = {"url": "", "number": 0, "title": ""} %} 
+#}
+<div class="card-footer-item range-card-footer-item">
+    <a href="{{ first.url }}">
+        <div class="columns">
+            <div class="card-footer-item-icon column is-2">
+                {% set icon_name = 'rewind' %}
+                {% include "macros/icon.njk" %}
+            </div>
+            <div class="column is-10">
+                № {{first.number}} {{first.title}}
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="card-footer-item range-card-footer-item">
+    <a href="{{ last.url }}">
+        <div class="columns">
+            <div class="column is-10 has-text-right">
+                № {{last.number}} {{last.title}}
+            </div>
+            <div class="card-footer-item-icon column is-2">
+                {% set icon_name = 'fast-forward' %}
+                {% include "macros/icon.njk" %}
+            </div>
+        </div>
+    </a>
+</div>
